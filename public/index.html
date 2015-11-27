@@ -19,7 +19,7 @@
 
 
     <!--<script type="text/babel" src="scripts/example.js"></script>-->
-    <script type="text/babel">
+    <script type="text/jsx">
       var data = [
         {author: "Pate Hunt", text: "This is one comment"},
         {author: "Jordan Walke", text: "This is *another* comment"}
@@ -48,10 +48,308 @@
               </div>
               <CommentBox data={this.props.data}/>
             </div>
-
           )
         }
       });
+      var LeftPanel =React.createClass({
+  render: function(){
+    return (
+      <div class="nav-docs">
+      <!-- Docs Nav -->
+
+        <div class="nav-docs-section">
+          <h3>快速入门</h3>
+          <ul>
+            <li>
+              <a href="/react/docs/getting-started.html">快速开始</a>
+            </li>
+            <li>
+                <a href="/react/docs/tutorial.html">教程</a>
+            </li>
+            <li>
+                <a href="/react/docs/thinking-in-react.html">深入理解React</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-docs-section">
+          <h3>指南</h3>
+          <ul>
+            <li>
+              <a href="/react/docs/why-react.html">为什么使用 React?</a>
+            </li>
+            <li>
+              <a href="/react/docs/displaying-data.html">数据呈现</a>
+            </li>
+            <li>
+              <a href="/react/docs/jsx-in-depth.html">深入理解JSX</a>
+            </li>
+            <li>
+              <a href="/react/docs/jsx-spread.html">JSX的延展属性</a>
+            </li>
+            <li>
+              <a href="/react/docs/jsx-gotchas.html">JSX的陷阱</a>
+            </li>
+          </ul>
+
+        <ul>
+
+        <li>
+          <a href="/react/docs/interactivity-and-dynamic-uis.html" class="active">富交互性的动态用户界面</a>
+        </li>
+        <li>
+          <a href="/react/docs/multiple-components.html">复合组件</a>
+        </li>
+        <li>
+          <a href="/react/docs/reusable-components.html">可复用组件</a>
+        </li>
+        <li>
+          <a href="/react/docs/transferring-props.html">传递 Props</a>
+        </li>
+        <li>
+          <a href="/react/docs/forms.html">表单组件</a>
+        </li>
+        <li>
+          <a href="/react/docs/working-with-the-browser.html">浏览器中的工作原理</a>
+          <ul>
+            <li>
+              <a href="/react/docs/more-about-refs.html">关于Refs的更多内容</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+        <a href="/react/docs/tooling-integration.html">Tooling Integration</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/addons.html">插件</a>
+
+        <ul>
+
+        <li>
+        <a href="/react/docs/animation.html">动画</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/two-way-binding-helpers.html">双向绑定</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/class-name-manipulation.html">类名操作</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/test-utils.html">测试工具集</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/clone-with-props.html">克隆组件</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/update.html">Immutability Helpers</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/pure-render-mixin.html">PureRenderMixin</a>
+        </li>
+
+        <li>
+        <a href="/react/docs/perf.html">性能分析工具</a>
+        </li>
+
+        </ul>
+
+        </li>
+
+        </ul>
+        </div>
+
+        <div class="nav-docs-section">
+        <h3>社区资源</h3>
+        <ul>
+
+        <li>
+        <a href="/react/docs/videos.html">视频</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/complementary-tools.html">其余工具</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/examples.html">范例</a>
+
+        </li>
+
+        </ul>
+        </div>
+
+        <div class="nav-docs-section">
+        <h3>参考</h3>
+        <ul>
+
+        <li>
+        <a href="/react/docs/top-level-api.html">顶层 API</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/component-api.html">组件 API</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/component-specs.html">组件的详细说明和生命周期（Component Specs and Lifecycle）</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/tags-and-attributes.html">标签和属性支持</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/events.html">事件系统</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/dom-differences.html">与 DOM 的差异</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/special-non-dom-attributes.html">特殊的非 DOM 属性</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/reconciliation.html">Reconciliation</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/glossary.html">React （虚拟）DOM 术语</a>
+
+        </li>
+
+        </ul>
+        </div>
+
+        <div class="nav-docs-section">
+        <h3>Flux</h3>
+        <ul>
+
+        <li>
+        <a href="/react/docs/flux-overview.html">Flux概述</a>
+
+        </li>
+
+        <li>
+        <a href="/react/docs/flux-todo-list.html">Flux的TodoMVC教程</a>
+
+        </li>
+
+        </ul>
+        </div>
+
+
+          <!-- Tips Nav -->
+
+        <div class="nav-docs-section">
+        <h3>Tips</h3>
+        <ul>
+
+        <li>
+        <a href="/react/tips/introduction.html">内容简介</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/inline-styles.html">内联样式</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/if-else-in-JSX.html">JSX 中的 If-Else</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/self-closing-tag.html">自闭合标签</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/maximum-number-of-jsx-root-nodes.html">JSX 根节点的最大数量</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/style-props-value-px.html">在样式props中快速制定像素值</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/children-props-type.html">子props的类型</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/controlled-input-null-value.html">值为 null 的 Controlled Input</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/componentWillReceiveProps-not-triggered-after-mounting.html">Mounting 后 componentWillReceiveProps 未被触发</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/props-in-getInitialState-as-anti-pattern.html">getInitialState 里的 Props 是一个反模式</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/dom-event-listeners.html">组件的 DOM 事件监听</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/initial-ajax.html">通过 AJAX 加载初始数据</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/false-in-jsx.html">JSX 的 false 处理</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/communicate-between-components.html">组件间的通信</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/expose-component-functions.html">Expose Component Functions</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/references-to-components.html">组件的引用</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/children-undefined.html">this.props.children undefined</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/use-react-with-other-libraries.html">与其他类库并行使用React</a>
+        </li>
+
+        <li>
+        <a href="/react/tips/dangerously-set-inner-html.html">Dangerously Set innerHTML</a>
+        </li>
+
+        </ul>
+        </div>
+
+        </div>
+    )
+  }
+});
+
+
       var CommentBox = React.createClass({
         getInitialState: function() {
           return {data: []};
