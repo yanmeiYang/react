@@ -25,6 +25,7 @@
         {author: "Jordan Walke", text: "This is *another* comment"}
       ];
 
+<<<<<<< HEAD
       var Header = React.createClass({
         render: function(){
           return (
@@ -53,13 +54,19 @@
         }
       });
 
+=======
+>>>>>>> react
       var CommentBox = React.createClass({
         getInitialState: function() {
           return {data: []};
         },
         render: function(){
             return (
+<<<<<<< HEAD
               <div className="commentBox content wrap documentationContent">
+=======
+              <div className="commentBox">
+>>>>>>> react
                 <h1>Comments</h1>
                 <CommentList data={this.props.data}/>
                 <CommentForm />
@@ -112,8 +119,12 @@
       });
 
       ReactDOM.render(
+<<<<<<< HEAD
         <Header data={data}/>,
 
+=======
+        <CommentBox data={data} />,
+>>>>>>> react
         document.getElementById('content')
       )
     </script>
